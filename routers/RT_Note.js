@@ -1,0 +1,10 @@
+"use strict";
+import express from "express";
+import CTL_Note from "../controller/note/CTL_Note";
+const router = express.Router();
+router.get("/getAllNotes", CTL_Note.getAllNotes);
+router.post("/getNotes", CTL_Note.getNotes);
+router.post("/getOneOfNote", CTL_Note.getOneOfNote);
+router.post("/addNote", CTL_Note.addNote);
+router.post("/addReplies", CTL_Note.addReplies);
+export default router;

@@ -1,0 +1,13 @@
+"use strict";
+import express from "express";
+import CTL_User from "../controller/user/CTL_User";
+const router = express.Router();
+router.post("/register", CTL_User.register);
+router.post("/login", CTL_User.login);
+router.post("/userMessage", CTL_User.userMessage);
+router.post("/searchNickname", CTL_User.searchNickname);
+router.post("/searchAccount", CTL_User.searchAccount);
+router.post("/changePassword", CTL_User.changePassword);
+router.post("/changeNickname", CTL_User.changeNickname);
+router.get("/singout", CTL_User.singout);
+export default router;

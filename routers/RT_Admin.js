@@ -1,0 +1,10 @@
+"use strict";
+import express from "express";
+import CTL_Admin from "../controller/admin/CTL_Admin";
+const router = express.Router();
+router.post("/register", CTL_Admin.register);
+router.post("/login", CTL_Admin.login);
+router.post("/changePassword", CTL_Admin.changePassword);
+router.get("/getAllAdmin", CTL_Admin.getAllAdmin);
+router.get("/singout", CTL_Admin.singout);
+export default router;
